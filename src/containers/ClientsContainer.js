@@ -18,7 +18,7 @@ class ClientsContainer extends React.Component {
     render() {
         return(
             <div>
-                <ClientInput />
+                <ClientInput /><br></br>
                 <Clients clients={this.props.clients} />
             </div>
         )

@@ -9,7 +9,7 @@ const Clients = (props) => {
     
     return (
         <div>
-          {props.clients.map(client => <li key={client.id}>  {client.last_name}, {client.first_name} </li>)}  
+          {props.clients.map(client => <li key={client.id}>  {client.last_name}, {client.first_name} - {client.cin} </li>)}  
         </div>
     )
 }
