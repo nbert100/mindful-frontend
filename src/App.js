@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux'
+
 import ClientsContainer from './containers/ClientsContainer'
 
 class App extends React.Component {
@@ -24,5 +24,5 @@ class App extends React.Component {
 //   )
 // }
 
-export default connect() (App);
+export default App;
 //we don't care about seeing the state. we just care about updating it

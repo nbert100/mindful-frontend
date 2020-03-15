@@ -1,7 +1,15 @@
 //action creator is a function
+//dispatch data instead of returning
 export function fetchClients() {
-//     fetch('http://localhost:3001/api/v1/clients')
-//     .then(res => res.json())
-//     .then(data => console.log(data))
+    return (dispatch) => 
+    {
+    
+    fetch('http://localhost:3001/api/v1/clients')
+    .then(res => res.json())
+    .then(clients => dispatch({
+        type: 'FETCH_CLIENTS',
+        payload: clients
+    }))
+    }
 
 }

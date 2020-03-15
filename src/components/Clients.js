@@ -5,10 +5,11 @@
 // can't use render in functional component
 import React from 'react'
 
-const Clients = () => {
+const Clients = (props) => {
+    
     return (
         <div>
-            Clients
+          {props.clients.map(client => <li key={client.id}>  {client.last_name}, {client.first_name} </li>)}  
         </div>
     )
 }
