@@ -1,17 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchClients} from './actions/fetchClients'
+import ClientsContainer from './containers/ClientsContainer'
 
 class App extends React.Component {
 
-  componentDidMount() {
-    
-  }
+  // componentDidMount() {
+  //   this.props.fetchClients()
+  // }
 
   render() {
     return (
       <div className="App">
-      App
+        <ClientsContainer />
       </div>
       )
   }
@@ -24,4 +24,5 @@ class App extends React.Component {
 //   )
 // }
 
-export default connect(null, {fetchClients}) (App);
+export default connect() (App);
+//we don't care about seeing the state. we just care about updating it

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk'
+//thunk returns function from the action creator
 import { Provider } from 'react-redux'
 import clientReducer from './reducers/clientReducer'
 //provider wraps the app so that we can use redux. any component  we wrap in provider will have access to the redux store
