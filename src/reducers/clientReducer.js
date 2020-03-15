@@ -7,6 +7,8 @@ export default function clientReducer(state = {clients: []}, action) {
     switch(action.type) {
         case 'FETCH_CLIENTS':
             return {clients: action.payload}
+        case 'ADD_CLIENT':
+            return {...state, clients: [...state.clients, action.payload]}
         default:
             return state     
     }
