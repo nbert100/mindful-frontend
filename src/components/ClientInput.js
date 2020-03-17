@@ -24,6 +24,14 @@ class ClientInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addClient(this.state)
+        this.setState({
+            first_name: '',
+            last_name: '',
+            cin: '',
+            phone: '',
+            address: '',
+            zipcode: ''
+        })
     }
 
     render() {
@@ -44,7 +52,7 @@ class ClientInput extends React.Component {
                     <input type='text' placeholder="Address" name="address" value={this.state.address} onChange={this.handleChange} />
                     <input type='number' placeholder="Zip Code" name="zipcode" value={this.state.zipcode} onChange={this.handleChange} />
                     <br></br>
-                    <input type="submit" />
+                    <input type="submit"/>
 
                 </form>
             </div>
