@@ -8,6 +8,7 @@ import clientReducer from './reducers/clientReducer'
 //provider wraps the app so that we can use redux. any component  we wrap in provider will have access to the redux store
 // import './index.css';
 import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
 // set up store so we need to import create store
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -17,7 +18,9 @@ let store = createStore(clientReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
     <Provider store={store}>
-     <App />   
+        <Router>
+         <App />   
+        </Router>        
     </Provider>, 
 document.getElementById('root')
 );

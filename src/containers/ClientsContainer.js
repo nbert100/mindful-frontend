@@ -5,9 +5,11 @@
 // to see something we mapstatetoprops
 import React from 'react'
 import { connect } from 'react-redux'
+import { Route } from 'react-router-dom'
 import { fetchClients } from '../actions/fetchClients'
 import Clients from '../components/Clients'
 import ClientInput from '../components/ClientInput'
+// import Client from '../components/Client'
 
 class ClientsContainer extends React.Component {
 
@@ -18,7 +20,8 @@ class ClientsContainer extends React.Component {
     render() {
         return(
             <div>
-                <ClientInput /><br></br>
+                <Route path='/clients/new' component={ClientInput} />
+                {/* <ClientInput /><br></br> */}
                 <Clients clients={this.props.clients} />
             </div>
         )
