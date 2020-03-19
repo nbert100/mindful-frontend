@@ -2,10 +2,12 @@
 import React from 'react'
 
 const Client = (props) => {
-
+     
+    let client = props.clients[props.match.params.id - 1]
+    
     return (
         <li>
-            {props.client.last_name}, {props.client.first_name} - {props.client.cin}
+            {client ? client.last_name : null}, {client ? client.first_name : null} - {client ? client.cin : null}
         </li>
     )
 

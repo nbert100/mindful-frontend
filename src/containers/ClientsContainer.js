@@ -3,13 +3,14 @@
 //if we want to fetch the accounts from our backend and use those accounts from our backend
 //how do we do that? connect to store
 // to see something we mapstatetoprops
+//set up nested route within clientscontainer
 import React from 'react'
 import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
 import { fetchClients } from '../actions/fetchClients'
 import Clients from '../components/Clients'
 import ClientInput from '../components/ClientInput'
-// import Client from '../components/Client'
+import Client from '../components/Client'
 
 class ClientsContainer extends React.Component {
 
@@ -22,7 +23,10 @@ class ClientsContainer extends React.Component {
             <div>
                 <Route path='/clients/new' component={ClientInput} />
                 {/* <ClientInput /><br></br> */}
-                <Clients clients={this.props.clients} />
+                <Route path='/clients/:id' render={(routerProps) => <Client {...routerProps} clients={this.props.clients} />} />
+                <Route exact path='/clients' render={(routerProps) => <Clients {...routerProps} clients={this.props.clients} /> } />
+                {/* <Clients clients={this.props.clients} /> */}
+                
             </div>
         )
     }
