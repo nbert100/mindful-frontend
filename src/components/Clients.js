@@ -4,13 +4,20 @@
 //in functional component you have to process props through argument
 // can't use render in functional component
 import React from 'react'
-import Client from './Client'
+import {Route, Link} from 'react-router-dom'
+// import Client from './Client'
 
 
 const Clients = (props) => {
+  
     return (
         <div>
-          {props.clients.map(client => <div key={client.id}><Client client={client}/></div>)}  
+          {props.clients.map(client => 
+          <li key={client.id}>
+            <Link to={`/clients/${client.id}`} >
+            {client.last_name}, {client.first_name}
+            </Link>
+          </li>)}  
         </div>
     )
 }

@@ -6,7 +6,7 @@
 //set up nested route within clientscontainer
 import React from 'react'
 import { connect } from 'react-redux'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { fetchClients } from '../actions/fetchClients'
 import Clients from '../components/Clients'
 import ClientInput from '../components/ClientInput'
@@ -21,12 +21,13 @@ class ClientsContainer extends React.Component {
     render() {
         return(
             <div>
+                <Switch>
                 <Route path='/clients/new' component={ClientInput} />
                 {/* <ClientInput /><br></br> */}
                 <Route path='/clients/:id' render={(routerProps) => <Client {...routerProps} clients={this.props.clients} />} />
                 <Route exact path='/clients' render={(routerProps) => <Clients {...routerProps} clients={this.props.clients} /> } />
                 {/* <Clients clients={this.props.clients} /> */}
-                
+                </Switch>
             </div>
         )
     }
