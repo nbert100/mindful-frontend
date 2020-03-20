@@ -5,7 +5,11 @@ const Provyders = (props) => {
     
         return (
            <div>
-               Provyders
+               {props.provyders && props.provyders.map(provyder =>
+               <li key={provyder.id}>
+                   {provyder.first_name} {provyder.last_name}, {provyder.title} - {provyder.specialty}
+                </li> 
+                )}
            </div> 
         )
     }
