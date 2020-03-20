@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addProvyder } from '../actions/addProvyder'
 
 class ProvyderInput extends React.Component {
 
@@ -23,7 +24,17 @@ class ProvyderInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-
+        this.props.addProvyder(this.state, this.props.client.id)
+        this.setState({
+            first_name: '',
+            last_name: '',
+            title: '',
+            specialty: '',
+            phone: '',
+            fax: '',
+            address: '',
+            zipcode: ''
+        })
     }
     render() {
         return (
@@ -66,4 +77,4 @@ class ProvyderInput extends React.Component {
     }
 }
 
-export default connect(null)(ProvyderInput)
+export default connect(null, {addProvyder})(ProvyderInput)

@@ -12,7 +12,7 @@ class ProvydersContainer extends React.Component {
     render() {
         return (
             <div>
-                <ProvyderInput />
+                <ProvyderInput client={this.props.client}/>
                 <Provyders provyders={this.props.client && this.props.client.provyders}/>
             </div>
         )
