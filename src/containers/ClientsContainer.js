@@ -22,9 +22,10 @@ class ClientsContainer extends React.Component {
         return(
             <div>
                 <Switch>
+                <Route path='/clients/:id' render={(routerProps) => <Client {...routerProps} clients={this.props.clients} />} />
                 <Route path='/clients/new' component={ClientInput} />
                 {/* <ClientInput /><br></br> */}
-                <Route path='/clients/:id' render={(routerProps) => <Client {...routerProps} clients={this.props.clients} />} />
+                
                 <Route exact path='/clients' render={(routerProps) => <Clients {...routerProps} clients={this.props.clients} /> } />
                 {/* <Clients clients={this.props.clients} /> */}
                 </Switch>

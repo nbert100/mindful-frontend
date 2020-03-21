@@ -41,8 +41,8 @@ class ProvyderInput extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                 <label>Provider:</label>
-                    <input type='text' placeholder="First Name" name="first_name" value={this.state.first_name} onChange={this.handleChange} /> 
-                    <input type='text' placeholder="Last Name" name="last_name" value={this.state.last_name} onChange={this.handleChange} />
+                    <input type='text' placeholder="First Name" name="first_name"  onChange={this.handleChange} /> 
+                    <input type='text' placeholder="Last Name" name="last_name"  onChange={this.handleChange} />
                     <br></br>
                     <label>Title:</label>
                     <select name="title" value={this.state.title} onChange={this.handleChange}>
@@ -58,7 +58,7 @@ class ProvyderInput extends React.Component {
                     {/* <input type='text' placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange} /> */}
                     <br></br>
                     <label>Specialty:</label>
-                    <input type='text' placeholder="Specialty" name="specialty" value={this.state.specialty} onChange={this.handleCh} />
+                    <input type='text' placeholder="Specialty" name="specialty" value={this.state.specialty} onChange={this.handleChange} />
                     <br></br>
                     <label>Phone:</label>
                     <input type='tel' placeholder="Phone Number" name="phone" value={this.state.phone} onChange={this.handleChange} />

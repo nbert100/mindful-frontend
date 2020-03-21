@@ -11,7 +11,7 @@ const Client = (props) => {
     return (
         <div>
         <h2>
-            {/* {client ? null : <Redirect to='/clients' />} */}
+            {client ? null : <Redirect to='/clients' />}
             {client ? client.last_name : null}, {client ? client.first_name : null} - {client ? client.cin : null}
             
         </h2>
