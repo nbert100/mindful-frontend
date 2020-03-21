@@ -3,6 +3,9 @@
 // gets the clients through  clients container through props
 //in functional component you have to process props through argument
 // can't use render in functional component
+
+// change this to client cards instead of the links
+
 import React from 'react'
 import {Route, Link} from 'react-router-dom'
 // import Client from './Client'

@@ -1,7 +1,8 @@
 // because we're just displaying information should use functional component
 import React from 'react'
 import {Redirect} from 'react-router-dom'
-import ProydersContainer from '../containers/ProvydersContainer'
+// import ProydersContainer from '../containers/ProvydersContainer'
+import AppointmentsContainer from '../containers/AppointmentsContainer'
 
 const Client = (props) => {
      //be careful with this id issue if some clients are deleted
@@ -15,7 +16,8 @@ const Client = (props) => {
             {client ? client.last_name : null}, {client ? client.first_name : null} - {client ? client.cin : null}
             
         </h2>
-        <ProydersContainer client={client} />
+        {/* <ProydersContainer client={client} /> */}
+        <AppointmentsContainer client={client} />
         </div>
     )
 
