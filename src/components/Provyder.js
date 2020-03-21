@@ -15,3 +15,5 @@ const Provyder = (props) => {
         </div>
     )
 }
+
+export default Provyder

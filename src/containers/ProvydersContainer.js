@@ -9,7 +9,7 @@ import { Route, Switch } from 'react-router-dom'
 import { fetchProvyders } from '../actions/fetchProvyders'
 import ProvyderInput from '../components/ProvyderInput'
 import Provyders from '../components/Provyders'
-// import Provyder from '../components/Provyder'
+import Provyder from '../components/Provyder'
 
 class ProvydersContainer extends React.Component {
 
@@ -21,13 +21,14 @@ class ProvydersContainer extends React.Component {
         return (
             <div>
                 <Switch>
-                    <Route />
-                    <Route />
+                    <Route path='/provyders/:id' render={(routerProps) => <Provyder {...routerProps} provyders={this.props.provyders} />} />
+                    <Route path='provyders/new' component={ProvyderInput} />
+                    <Route exact path='/provyders' render={(routerProps) => <Provyders {...routerProps} provyders={this.props.provyders} />} />
                 </Switch>
                 <ProvyderInput />
                 {/* <ProvyderInput client={this.props.client}/> */}
                 {/* <Provyders provyders={this.props.client && this.props.client.provyders}/> */}
-                <Provyders provyders={this.props.provyders} />
+                {/* <Provyders provyders={this.props.provyders} /> */}
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Provyder } from 'react-redux'
+
 import { Route, Link } from 'react-router-dom'
 
 
