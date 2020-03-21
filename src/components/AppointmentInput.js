@@ -19,7 +19,7 @@ class AppointmentInput extends React.Component {
         this.props.addAppointment(this.state, this.props.client.id)
         this.setState({
             when: '',
-            kind: ''
+            kind: 'Initial'
         })
     }
 
@@ -27,14 +27,18 @@ class AppointmentInput extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    <label>Provider</label>
+                    <select>
+
+                    </select>
                     <label>When:</label>
                     <input type="date" name="when" value={this.state.when} onChange={this.handleChange} />
                     <label>Type of Appointment:</label>
                     <select name="kind" value={this.state.kind} onChange={this.handleChange}>
-                        <option selected disabled hidden>Select One</option>
                         <option>Initial</option>
                         <option>Routine</option>
                     </select>
+                    <input type="submit"/>
                 </form>   
             </div>
             

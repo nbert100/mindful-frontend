@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ClientsContainer from './containers/ClientsContainer'
+import ProvydersContainer from './containers/ProvydersContainer'
 
 class App extends React.Component {
 
@@ -12,6 +13,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ClientsContainer />
+        <ProvydersContainer />
       </div>
       )
   }
