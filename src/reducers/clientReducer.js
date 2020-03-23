@@ -10,10 +10,6 @@ export default function clientReducer(state = {clients: []}, action) {
             return {clients: action.payload}
         case 'ADD_CLIENT':
             return {...state, clients: [...state.clients, action.payload]}
-        case 'ADD_PROVYDER':
-            debugger
-            // let client = props.clients.filter(client => client.id == props.match.params.id)[0]
-            return {}
         case 'ADD_APPOINTMENT':
             return {...state, appointments: [...state.clients.appointments, action.payload]}
         default:

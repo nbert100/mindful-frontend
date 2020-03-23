@@ -25,7 +25,7 @@ class ProvydersContainer extends React.Component {
                     <Route path='provyders/new' component={ProvyderInput} />
                     <Route exact path='/provyders' render={(routerProps) => <Provyders {...routerProps} provyders={this.props.provyders} />} />
                 </Switch>
-                <ProvyderInput />
+                {/* <ProvyderInput /> */}
                 {/* <ProvyderInput client={this.props.client}/> */}
                 {/* <Provyders provyders={this.props.client && this.props.client.provyders}/> */}
                 {/* <Provyders provyders={this.props.provyders} /> */}

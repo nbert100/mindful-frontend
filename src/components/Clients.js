@@ -15,7 +15,7 @@ const Clients = (props) => {
   
     return (
         <div>
-          {props.clients.map(client => 
+          {props.clients.clients.map(client => 
           <li key={client.id}>
             <Link to={`/clients/${client.id}`} >
             {client.last_name}, {client.first_name}
