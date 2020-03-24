@@ -4,7 +4,7 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 
 const Provyder = (props) => {
-    let provyder = props.provyders.filter(provyder => provyder.id == props.match.params.id)[0]
+    let provyder = props.provyders.provyders.filter(provyder => provyder.id == props.match.params.id)[0]
 
     return (
         <div>

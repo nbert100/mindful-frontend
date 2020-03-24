@@ -12,7 +12,6 @@ import {Route, Link} from 'react-router-dom'
 
 
 const Clients = (props) => {
-  
     return (
         <div>
           {props.clients.clients.map(client => 
