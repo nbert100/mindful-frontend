@@ -9,10 +9,9 @@ class AppointmentsContainer extends React.Component {
     render() {
         return (
             <div>
-                {/* <AppointmentInput client={this.props.client}/>
-                <Appointments appointments={this.props.client && this.props.client.appointments}/> */}
                 <AppointmentInput />
-                <Appointments />
+                {/* <AppointmentInput client={this.props.client}/> */}
+                <Appointments appointments={this.props.client && this.props.client.appointments}/>
             </div>
         )
     }

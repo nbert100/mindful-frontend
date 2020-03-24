@@ -1,16 +1,15 @@
+//add attributes from provyder when connected to make "Route Cardiologist Appointment with provyder on date"
+//change that ugly date
 import React from 'react'
 
 const Appointments = (props) => {
-
+console.log(props)
      return (
        <div>
-           Appointments
-    {/* //         {props.provyders && props.provyders.map(provyder =>
-    //         <li key={provyder.id}>
-    //             {provyder.first_name} {provyder.last_name}, {provyder.title} - {provyder.specialty}
-    //         </li> 
-    //         )} */}
-       </div> 
+         {props.appointments && props.appointments.map(appointment => 
+          <li key={appointment.id}>{appointment.kind} appointment on {appointment.when} </li>)}
+           
+      </div> 
      )
 }
     
