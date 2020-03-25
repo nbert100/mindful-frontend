@@ -32,12 +32,15 @@ class AppointmentInput extends React.Component {
 
                     </select>
                     <label>When:</label>
-                    <input type="date" name="when" value={this.state.when} onChange={this.handleChange} />
+                    <input type="datetime-local" name="when" value={this.state.when} onChange={this.handleChange} />
                     <label>Type of Appointment:</label>
                     <select name="kind" value={this.state.kind} onChange={this.handleChange}>
                         <option>Initial</option>
                         <option>Routine</option>
                     </select>
+                    {/* <div id="provyder-search">
+
+                    </div> */}
                     <input type="submit"/>
                 </form>   
             </div>
