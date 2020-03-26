@@ -2,18 +2,20 @@
 // takes in prevoius state and then action type
 // a reducer is a function
 
-export default function clientReducer(state = {clients: []}, action) {
-// where does action come from
+export default function clientReducer(state = { clients: [] }, action) {
+  // where does action come from
 
-    switch(action.type) {
-        case 'FETCH_CLIENTS':
-            return {clients: action.payload}            
-        case 'ADD_CLIENT':
-            return {...state, clients: [...state.clients, action.payload]}
-        case 'ADD_APPOINTMENT':
-            return {...state, appointments: [...state.clients.appointments, action.payload]}
-        default:
-            return state     
-    }
-        
+  switch (action.type) {
+    case "FETCH_CLIENTS":
+      return { clients: action.payload };
+    case "ADD_CLIENT":
+      return { ...state, clients: [...state.clients, action.payload] };
+    case "ADD_APPOINTMENT":
+      return {
+        ...state,
+        appointments: [...state.appointments, action.payload]
+      };
+    default:
+      return state;
+  }
 }
