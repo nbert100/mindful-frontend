@@ -5,7 +5,7 @@ import { addAppointment } from "../actions/addAppointment";
 class AppointmentInput extends React.Component {
   state = {
     when: "",
-    kind: "",
+    kind: "Initial",
     provyder_id: "",
     client_id: this.props.client.id
   };
@@ -21,7 +21,7 @@ class AppointmentInput extends React.Component {
     this.props.addAppointment(this.state, this.props.client.id);
     this.setState({
       when: "",
-      kind: "Initial",
+      kind: "",
       provyder_id: "",
       client_id: this.props.client.id
     });

@@ -4,7 +4,7 @@
 
 export default function clientReducer(state = { clients: [] }, action) {
   // where does action come from
-
+  debugger;
   switch (action.type) {
     case "FETCH_CLIENTS":
       return { clients: action.payload };
