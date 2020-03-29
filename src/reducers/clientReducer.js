@@ -10,6 +10,7 @@ export default function clientReducer(state = { clients: [] }, action) {
     case "FETCH_CLIENTS":
       return { clients: action.payload };
     case "ADD_CLIENT":
+      console.log(action.payload);
       return { ...state, clients: [...state.clients, action.payload] };
     case "ADD_APPOINTMENT":
       return {
