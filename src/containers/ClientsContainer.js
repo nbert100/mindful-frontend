@@ -20,7 +20,7 @@ class ClientsContainer extends React.Component {
   render() {
     return (
       <div>
-        {this.props.clients.length > 0 ? (
+        {this.props.clients.clients.length > 0 ? (
           <Switch>
             <Route path="/clients/new" component={ClientInput} />
             <Route
@@ -36,7 +36,6 @@ class ClientsContainer extends React.Component {
                 <Clients {...routerProps} clients={this.props.clients} />
               )}
             />
-            {/* <Clients clients={this.props.clients} /> */}
           </Switch>
         ) : (
           <p>Loading...</p>

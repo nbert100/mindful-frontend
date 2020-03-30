@@ -6,22 +6,22 @@
 
 // change this to client cards instead of the links
 
-import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import React from "react";
+import { Route, Link } from "react-router-dom";
 // import Client from './Client'
 
-
-const Clients = (props) => {
-    return (
-        <div>
-          {props.clients.map(client => 
-          <li key={client.id}>
-            <Link to={`/clients/${client.id}`} >
+const Clients = props => {
+  return (
+    <div>
+      {props.clients.clients.map(client => (
+        <li key={client.id}>
+          <Link to={`/clients/${client.id}`}>
             {client.last_name}, {client.first_name}
-            </Link>
-          </li>)}  
-        </div>
-    )
-}
+          </Link>
+        </li>
+      ))}
+    </div>
+  );
+};
 
-export default Clients
+export default Clients;

@@ -1,21 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import { Route, Link } from 'react-router-dom'
+import { Route, Link } from "react-router-dom";
 
+const Provyders = props => {
+  return (
+    <div>
+      {props.provyders.provyders.map(provyder => (
+        <li key={provyder.id}>
+          <Link to={`/provyders/${provyder.id}`}>
+            {provyder.first_name} {provyder.last_name}, {provyder.title}
+          </Link>
+        </li>
+      ))}
+    </div>
+  );
+};
 
-const Provyders = (props) => {
-    return (
-        
-        <div>
-           {props.provyders.provyders.map(provyder =>
-            <li key={provyder.id}>
-                <Link to={`/provyders/${provyder.id}`}>
-                    {provyder.first_name} {provyder.last_name}, {provyder.title} 
-                </Link>
-            </li>)} 
-        </div>
-        
-    )
- }
-
-export default Provyders
+export default Provyders;
