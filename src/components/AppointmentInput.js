@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addAppointment } from "../actions/addAppointment";
+import { addAppointmentToClient } from "../actions/addAppointmentToClient";
 
 class AppointmentInput extends React.Component {
   state = {
@@ -18,7 +18,7 @@ class AppointmentInput extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addAppointment(this.state, this.props.client.id);
+    this.props.addAppointmentToClient(this.state, this.props.client.id);
     this.setState({
       when: "",
       kind: "",
@@ -41,7 +41,7 @@ class AppointmentInput extends React.Component {
             <option value="" selected disabled hidden>
               Select Provider
             </option>
-            {this.props.provyders.map(provider => {
+            {this.props.providers.map(provider => {
               return <option value={provider.id}>{provider.first_name}</option>;
             })}
           </select>
@@ -61,9 +61,6 @@ class AppointmentInput extends React.Component {
             <option>Initial</option>
             <option>Routine</option>
           </select>
-          {/* <div id="provyder-search">
-
-                    </div> */}
           <input type="submit" />
         </form>
       </div>
@@ -77,4 +74,6 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { addAppointment })(AppointmentInput);
+export default connect(mapStateToProps, { addAppointmentToClient })(
+  AppointmentInput
+);

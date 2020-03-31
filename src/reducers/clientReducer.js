@@ -16,16 +16,15 @@ export default function clientReducer(state = [], action) {
       return [...state, action.payload];
     case "ADD_APPOINTMENT_TO_CLIENT":
       //action.payload includes client_id
-      //copy prev state
-      //find the client that was updated and add the new appointment to their appointments array
-      // client = state.find(client => client.id === payload.client_id)
-      // client.appointments.push(action.payload)
-      return {
-        ...state,
-        appointments: [...state.appointments, action.payload]
-      };
-    // case "FETCH_PROVYDERS":
-    //   return { provyders: action.payload };
+      //   //copy prev state
+      //   //find the client that was updated and add the new appointment to their appointments array
+
+      let client = state.find(client => client.id === action.payload.client_id);
+      client.appointments.push(action.payload);
+      return client.appointments;
+
+    // // case "FETCH_PROVYDERS":
+    // //   return { provyders: action.payload };
     default:
       return state;
   }
