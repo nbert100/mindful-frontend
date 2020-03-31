@@ -13,7 +13,7 @@ const Client = props => {
       <h2>
         {client.last_name}, {client.first_name} - {client.cin}
       </h2>
-      <AppointmentInput providers={client.provyders} client={client} />
+      <AppointmentInput providers={props.provyders} client={client} />
       <Appointments appointments={client.appointments} />
     </div>
   );

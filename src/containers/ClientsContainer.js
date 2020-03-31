@@ -26,7 +26,11 @@ class ClientsContainer extends React.Component {
             <Route
               path="/clients/:id"
               render={routerProps => (
-                <Client {...routerProps} clients={this.props.clients} />
+                <Client
+                  {...routerProps}
+                  clients={this.props.clients}
+                  provyders={this.props.provyders}
+                />
               )}
             />
             <Route
@@ -48,7 +52,8 @@ class ClientsContainer extends React.Component {
 //give this component access through props to the clients inside our state
 const mapStateToProps = state => {
   return {
-    clients: state.clients
+    clients: state.clients,
+    provyders: state.provyders
   };
 };
 

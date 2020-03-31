@@ -21,7 +21,8 @@ export default function clientReducer(state = [], action) {
 
       let client = state.find(client => client.id === action.payload.client_id);
       client.appointments.push(action.payload);
-      return client.appointments;
+      //above returns the number of elements in the array
+      return state;
 
     // // case "FETCH_PROVYDERS":
     // //   return { provyders: action.payload };

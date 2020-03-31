@@ -1,7 +1,7 @@
 export const addAppointmentToClient = appointment => {
   return dispatch => {
     fetch(
-      `http://localhost:5000/api/v1/clients/${appointment.client_id}/appointments`,
+      `http://localhost:8080/api/v1/clients/${appointment.client_id}/appointments`,
       {
         method: "POST",
         headers: {
