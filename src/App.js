@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import ClientsContainer from './containers/ClientsContainer'
-import ProvydersContainer from './containers/ProvydersContainer'
+import ClientsContainer from "./containers/ClientsContainer";
+import ProvydersContainer from "./containers/ProvydersContainer";
 
 class App extends React.Component {
-
   // componentDidMount() {
   //   this.props.fetchClients()
   // }
@@ -15,7 +14,7 @@ class App extends React.Component {
         <ClientsContainer />
         <ProvydersContainer />
       </div>
-      )
+    );
   }
 }
 
