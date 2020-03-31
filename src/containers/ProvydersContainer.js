@@ -20,25 +20,26 @@ class ProvydersContainer extends React.Component {
     console.log(this.props);
     return (
       <div>
-        {/* {this.props.provyders.provyders.length > 0 ? ( */}
-        <Switch>
-          <Route path="/provyders/new" component={ProvyderInput} />
-          <Route
-            path="/provyders/:id"
-            render={routerProps => (
-              <Provyder {...routerProps} provyders={this.props.provyders} />
-            )}
-          />
-          <Route
-            exact
-            path="/provyders"
-            render={routerProps => (
-              <Provyders {...routerProps} provyders={this.props.provyders} />
-            )}
-          />
-        </Switch>
-        {/* // ) : ( // <p>Loading...</p>
-        // )} */}
+        {this.props.provyders.length > 0 ? (
+          <Switch>
+            <Route path="/provyders/new" component={ProvyderInput} />
+            <Route
+              path="/provyders/:id"
+              render={routerProps => (
+                <Provyder {...routerProps} provyders={this.props.provyders} />
+              )}
+            />
+            <Route
+              exact
+              path="/provyders"
+              render={routerProps => (
+                <Provyders {...routerProps} provyders={this.props.provyders} />
+              )}
+            />
+          </Switch>
+        ) : (
+          <p>Loading...</p>
+        )}
         {/* <ProvyderInput /> */}
         {/* <ProvyderInput client={this.props.client}/> */}
         {/* <Provyders provyders={this.props.client && this.props.client.provyders}/> */}
