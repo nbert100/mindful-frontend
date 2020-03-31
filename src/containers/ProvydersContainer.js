@@ -7,9 +7,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { fetchProvyders } from "../actions/fetchProvyders";
-import Provyders from "../components/Provyders";
-import ProvyderInput from "../components/ProvyderInput";
-import Provyder from "../components/Provyder";
+import Provyders from "../components/provyder/Provyders";
+import ProvyderInput from "../components/provyder/ProvyderInput";
+import Provyder from "../components/provyder/Provyder";
 
 class ProvydersContainer extends React.Component {
   componentDidMount() {

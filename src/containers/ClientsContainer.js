@@ -8,9 +8,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { fetchClients } from "../actions/fetchClients";
-import Clients from "../components/Clients";
-import ClientInput from "../components/ClientInput";
-import Client from "../components/Client";
+import Clients from "../components/client/Clients";
+import ClientInput from "../components/client/ClientInput";
+import Client from "../components/client/Client";
 
 class ClientsContainer extends React.Component {
   componentDidMount() {

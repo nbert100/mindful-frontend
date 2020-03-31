@@ -2,8 +2,8 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 // import ProvydersContainer from "../containers/ProvydersContainer";
-import AppointmentInput from "./AppointmentInput";
-import Appointments from "./Appointments";
+import AppointmentInput from "../../components/appointment/AppointmentInput";
+import Appointments from "../../components/appointment/Appointments";
 
 const Client = props => {
   let client = props.clients.find(client => client.id == props.match.params.id);
