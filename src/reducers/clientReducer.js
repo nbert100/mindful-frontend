@@ -7,18 +7,23 @@
 //   provyders: []
 // };
 
-export default function clientReducer(state = { clients: [] }, action) {
+export default function clientReducer(state = [], action) {
   switch (action.type) {
     case "FETCH_CLIENTS":
-      return { clients: action.payload };
+      return action.payload;
     case "ADD_CLIENT":
       console.log(action.payload);
-      return { ...state, clients: [...state.clients, action.payload] };
-    // case "ADD_APPOINTMENT":
-    //   return {
-    //     ...state,
-    //     appointments: [...state.appointments, action.payload]
-    //   };
+      return [...state, action.payload];
+    case "ADD_APPOINTMENT_TO_CLIENT":
+      //action.payload includes client_id
+      //copy prev state
+      //find the client that was updated and add the new appointment to their appointments array
+      // client = state.find(client => client.id === payload.client_id)
+      // client.appointments.push(action.payload)
+      return {
+        ...state,
+        appointments: [...state.appointments, action.payload]
+      };
     // case "FETCH_PROVYDERS":
     //   return { provyders: action.payload };
     default:

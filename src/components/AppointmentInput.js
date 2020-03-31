@@ -28,7 +28,6 @@ class AppointmentInput extends React.Component {
   };
 
   render() {
-    debugger;
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -42,7 +41,7 @@ class AppointmentInput extends React.Component {
             <option value="" selected disabled hidden>
               Select Provider
             </option>
-            {this.props.providers.map(provider => {
+            {this.props.provyders.map(provider => {
               return <option value={provider.id}>{provider.first_name}</option>;
             })}
           </select>
@@ -72,4 +71,10 @@ class AppointmentInput extends React.Component {
   }
 }
 
-export default connect(null, { addAppointment })(AppointmentInput);
+const mapStateToProps = state => {
+  return {
+    provyders: state.provyders.provyders
+  };
+};
+
+export default connect(mapStateToProps, { addAppointment })(AppointmentInput);

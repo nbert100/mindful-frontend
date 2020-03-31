@@ -6,9 +6,7 @@ import AppointmentInput from "./AppointmentInput";
 import Appointments from "./Appointments";
 
 const Client = props => {
-  let client = props.clients.clients.filter(
-    client => client.id == props.match.params.id
-  )[0];
+  let client = props.clients.find(client => client.id == props.match.params.id);
   console.log(client);
   return (
     <div>

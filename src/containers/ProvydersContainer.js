@@ -20,7 +20,7 @@ class ProvydersContainer extends React.Component {
     console.log(this.props);
     return (
       <div>
-        {/* {this.props.provyders.length > 0 ? ( */}
+        {/* {this.props.provyders.provyders.length > 0 ? ( */}
         <Switch>
           <Route path="/provyders/new" component={ProvyderInput} />
           <Route

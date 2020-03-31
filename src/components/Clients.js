@@ -13,7 +13,7 @@ import { Route, Link } from "react-router-dom";
 const Clients = props => {
   return (
     <div>
-      {props.clients.clients.map(client => (
+      {props.clients.map(client => (
         <li key={client.id}>
           <Link to={`/clients/${client.id}`}>
             {client.last_name}, {client.first_name}

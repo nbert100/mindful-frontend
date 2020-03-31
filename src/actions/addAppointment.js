@@ -12,7 +12,7 @@ export const addAppointment = appointment => {
     )
       .then(res => res.json())
       .then(appointment =>
-        dispatch({ type: "ADD_APPOINTMENT", payload: appointment })
+        dispatch({ type: "ADD_APPOINTMENT_TO_CLIENT", payload: appointment })
       );
   };
 };

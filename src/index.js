@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
+import { logger } from "redux-logger";
 //thunk returns function from the action creator
 import { Provider } from "react-redux";
 //import clientReducer from './reducers/clientReducer'
@@ -15,7 +16,10 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
+let store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk, logger))
+);
 //store is where you're storing your data globally
 
 ReactDOM.render(
