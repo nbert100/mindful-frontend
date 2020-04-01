@@ -8,6 +8,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { fetchClients } from "../actions/fetchClients";
+// import { removeAppointment } from "../actions/removeAppointment";
 import Clients from "../components/client/Clients";
 import ClientInput from "../components/client/ClientInput";
 import Client from "../components/client/Client";
@@ -56,6 +57,17 @@ const mapStateToProps = state => {
     provyders: state.provyders
   };
 };
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     removeAppointment: () => {
+//       dispatch(removeAppointment());
+//     },
+//     fetchClients: () => {
+//       dispatch(fetchClients());
+//     }
+//   };
+// };
 
 // connect will use that first function (whatever it is) to
 //get your redux store and map it whatever is returned in that function as props

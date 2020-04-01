@@ -18,14 +18,19 @@ export default function clientReducer(state = [], action) {
       //action.payload includes client_id
       //   //copy prev state
       //   //find the client that was updated and add the new appointment to their appointments array
+      let updatedState = [...state];
+      let client = updatedState.find(
+        client => client.id === action.payload.client_id
+      );
+      client.appointments = [...client.appointments, action.payload];
+      return updatedState;
 
-      let client = state.find(client => client.id === action.payload.client_id);
-      client.appointments.push(action.payload);
-      //above returns the number of elements in the array
-      return state;
-
-    // // case "FETCH_PROVYDERS":
-    // //   return { provyders: action.payload };
+    case "REMOVE_APPOINTMENT":
+      let copyState = [...state];
+      let newState = copyState.filter(
+        appointment => appointment.id !== action.payload.id
+      );
+      return newState;
     default:
       return state;
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addAppointmentToClient } from "../../actions/addAppointmentToClient";
+import { Form } from "react-bootstrap";
 
 class AppointmentInput extends React.Component {
   state = {

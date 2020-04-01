@@ -1,7 +1,6 @@
 // because we're just displaying information should use functional component
 import React from "react";
 import { Redirect } from "react-router-dom";
-// import ProvydersContainer from "../containers/ProvydersContainer";
 import AppointmentInput from "../../components/appointment/AppointmentInput";
 import Appointments from "../../components/appointment/Appointments";
 
