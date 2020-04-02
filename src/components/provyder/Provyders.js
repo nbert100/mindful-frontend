@@ -4,7 +4,9 @@ import { Route, Link } from "react-router-dom";
 
 const Provyders = props => {
   return (
-    <div>
+    <div className="provyder-container">
+      <h4>Providers:</h4>
+      <br></br>
       {props.provyders.map(provyder => (
         <li key={provyder.id}>
           <Link to={`/provyders/${provyder.id}`}>

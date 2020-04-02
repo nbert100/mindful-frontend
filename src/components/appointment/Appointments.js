@@ -11,11 +11,12 @@ const Appointments = props => {
 
   const removeAppointment = deletedAppointment => {
     props.removeAppointment(deletedAppointment);
-    console.log("clicked");
   };
 
   return (
-    <div>
+    <div className="appointment-container">
+      <h5>Appointments:</h5>
+      <br></br>
       {props.appointments &&
         props.appointments.map(appointment => (
           <li key={appointment.id}>

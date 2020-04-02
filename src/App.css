@@ -1,0 +1,172 @@
+.App {
+  /* text-align: center; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.client-form-container {
+  background-color: lavender;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 16px auto;
+  max-width: 960px;
+  padding: 10%;
+  width: 75%;
+  border-radius: 25px;
+}
+
+.provyder-form-container {
+  background-color: lavender;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 16px auto;
+  max-width: 960px;
+  padding: 10%;
+  width: 75%;
+  border-radius: 25px;
+}
+
+.appointment-container {
+  background-color: lavender;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 16px auto;
+  max-width: 960px;
+  padding: 10%;
+  width: 75%;
+  border-radius: 25px;
+}
+
+.client-container {
+  background-color: lavender;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 16px auto;
+  max-width: 960px;
+  padding: 10%;
+  width: 75%;
+  border-radius: 25px;
+}
+
+.provyder-container {
+  background-color: lavender;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 16px auto;
+  max-width: 960px;
+  padding: 10%;
+  width: 75%;
+  border-radius: 25px;
+}
+
+input[type="text"] {
+  background: transparent;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid purple;
+  font-size: 14px;
+}
+
+input[type="text"]:focus {
+  background-color: white;
+  border: 3px solid #555;
+}
+
+input[type="number"] {
+  background: transparent;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid purple;
+  font-size: 14px;
+}
+
+input[type="number"]:focus {
+  background-color: white;
+  border: 3px solid #555;
+}
+
+input[type="tel"] {
+  background: transparent;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid purple;
+  font-size: 14px;
+}
+
+input[type="tel"]:focus {
+  background-color: white;
+  border: 3px solid #555;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6495ed;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  transition-duration: 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-color: #f08080;
+  color: white;
+}

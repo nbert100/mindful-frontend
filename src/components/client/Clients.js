@@ -13,7 +13,9 @@ import ClientInput from "./ClientInput";
 
 const Clients = props => {
   return (
-    <div>
+    <div className="client-container">
+      <h4>My Clients</h4>
+      <br></br>
       {props.clients.map(client => (
         <li key={client.id}>
           <Link to={`clients/${client.id}`}>

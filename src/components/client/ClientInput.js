@@ -1,7 +1,5 @@
-// where the form lives
 import React from "react";
 import { connect } from "react-redux";
-
 import { addClient } from "../../actions/addClient";
 
 class ClientInput extends React.Component {
@@ -36,7 +34,9 @@ class ClientInput extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="client-form-container">
+        <h4>New Client:</h4>
+        <br></br>
         <form onSubmit={this.handleSubmit}>
           <label>Client:</label>
           <input

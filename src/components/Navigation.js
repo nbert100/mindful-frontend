@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
-// import { Route, Link } from "react-router-dom";
 
 export class Navigation extends React.Component {
   render() {
@@ -18,21 +17,25 @@ export class Navigation extends React.Component {
             </NavLink>
             <NavLink
               className="d-inline p-2 bg-dark text-white"
+              to="/clients/new"
+            >
+              New Client
+            </NavLink>
+            <NavLink
+              className="d-inline p-2 bg-dark text-white"
               to="/provyders"
             >
               Providers
+            </NavLink>
+            <NavLink
+              className="d-inline p-2 bg-dark text-white"
+              to="/provyders/new"
+            >
+              New Provider
             </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     );
   }
-}
-
-{
-  /* // Home (list of clients)
-// Back
-// New Client
-// New Provider
-//Providers */
 }

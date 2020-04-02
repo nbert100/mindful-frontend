@@ -39,7 +39,9 @@ class ProvyderInput extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="provyder-form-container">
+        <h4>New Provider:</h4>
+        <br></br>
         <form onSubmit={this.handleSubmit}>
           <label>Provider:</label>
           <input

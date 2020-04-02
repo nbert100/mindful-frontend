@@ -30,7 +30,7 @@ class AppointmentInput extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="appointment-form-container">
         <form onSubmit={this.handleSubmit}>
           <label>Provider:</label>
           <select
@@ -43,17 +43,21 @@ class AppointmentInput extends React.Component {
               Select Provider
             </option>
             {this.props.provyders.map(provider => {
-              return <option value={provider.id}>{provider.first_name}</option>;
+              return (
+                <option value={provider.id}>
+                  {provider.first_name} {provider.last_name} {provider.title}
+                </option>
+              );
             })}
           </select>
-          <label>When:</label>
+          <label> Date and Time: </label>
           <input
             type="datetime-local"
             name="when"
             value={this.state.when}
             onChange={this.handleChange}
           />
-          <label>Type of Appointment:</label>
+          <label> Type of Appointment: </label>
           <select
             name="kind"
             value={this.state.kind}
