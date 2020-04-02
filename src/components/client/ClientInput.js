@@ -31,6 +31,7 @@ class ClientInput extends React.Component {
       address: "",
       zipcode: ""
     });
+    this.props.history.push("/clients");
   };
 
   render() {

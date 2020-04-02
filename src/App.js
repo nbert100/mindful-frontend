@@ -27,12 +27,5 @@ class App extends React.Component {
   }
 }
 
-//mapstatetoprops is the way of accessing values in our store as props
-// const mapStateToProps = (state) => {
-//   return (
-//     clients: state.clients
-//   )
-// }
-
 export default connect(null, { fetchProvyders })(App);
 //we don't care about seeing the state. we just care about updating it

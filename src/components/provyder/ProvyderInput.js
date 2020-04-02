@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addProvyder } from "../../actions/addProvyder";
+// import { Redirect } from "react-router-dom";
 
 class ProvyderInput extends React.Component {
   state = {
@@ -22,7 +23,7 @@ class ProvyderInput extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addProvyder(this.state, this.props.client.id);
+    this.props.addProvyder(this.state);
     this.setState({
       first_name: "",
       last_name: "",
@@ -33,7 +34,9 @@ class ProvyderInput extends React.Component {
       address: "",
       zipcode: ""
     });
+    this.props.history.push("/provyders");
   };
+
   render() {
     return (
       <div>
