@@ -1,14 +1,20 @@
 export const removeAppointment = appointment => {
   return dispatch => {
-    return fetch(
+    fetch(
       `http://localhost:8080/api/v1/clients/${appointment.client_id}/appointments/${appointment.id}`,
       {
-        method: "DELETE"
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
       }
     )
       .then(res => res.json())
-      .then(res =>
-        dispatch({ type: "REMOVE_APPOINTMENT", payload: appointment })
+      .then(appointment =>
+        dispatch({
+          type: "REMOVE_APPOINTMENT",
+          payload: appointment
+        })
       );
   };
 };

@@ -26,10 +26,14 @@ export default function clientReducer(state = [], action) {
       return updatedState;
 
     case "REMOVE_APPOINTMENT":
-      let copyState = [...state];
-      let newState = copyState.filter(
+      let newState = [...state];
+      let appClient = newState.find(
+        client => client.id === action.payload.client_id
+      );
+      appClient.appointments = appClient.appointments.filter(
         appointment => appointment.id !== action.payload.id
       );
+      debugger;
       return newState;
     default:
       return state;

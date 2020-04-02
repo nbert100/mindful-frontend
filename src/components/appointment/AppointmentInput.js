@@ -42,7 +42,7 @@ class AppointmentInput extends React.Component {
             <option value="" selected disabled hidden>
               Select Provider
             </option>
-            {this.props.providers.map(provider => {
+            {this.props.provyders.map(provider => {
               return <option value={provider.id}>{provider.first_name}</option>;
             })}
           </select>
@@ -71,7 +71,7 @@ class AppointmentInput extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    provyders: state.provyders.provyders
+    provyders: state.provyders
   };
 };
 

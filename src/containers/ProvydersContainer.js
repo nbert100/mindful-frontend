@@ -6,16 +6,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import { fetchProvyders } from "../actions/fetchProvyders";
+// import { fetchProvyders } from "../actions/fetchProvyders";
 import Provyders from "../components/provyder/Provyders";
 import ProvyderInput from "../components/provyder/ProvyderInput";
 import Provyder from "../components/provyder/Provyder";
 
 class ProvydersContainer extends React.Component {
-  componentDidMount() {
-    this.props.fetchProvyders();
-  }
-
   render() {
     console.log(this.props);
     return (
@@ -55,4 +51,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { fetchProvyders })(ProvydersContainer);
+export default connect(mapStateToProps)(ProvydersContainer);

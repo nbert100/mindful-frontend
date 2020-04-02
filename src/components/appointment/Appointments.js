@@ -20,7 +20,13 @@ const Appointments = props => {
         props.appointments.map(appointment => (
           <li key={appointment.id}>
             {appointment.kind} appointment on {formatTime(appointment.when)}{" "}
-            <span onClick={() => props.removeAppointment(appointment)}>❌</span>
+            <span
+              aria-label="and x"
+              role="img"
+              onClick={() => props.removeAppointment(appointment)}
+            >
+              ❌
+            </span>
           </li>
         ))}
     </div>
