@@ -30,7 +30,10 @@ const Client = props => {
       </div>
       <br></br>
       <AppointmentInput client={client} />
-      <Appointments appointments={client.appointments} />
+      <Appointments
+        appointments={client.appointments}
+        provyders={client.provyders}
+      />
     </div>
   );
 };

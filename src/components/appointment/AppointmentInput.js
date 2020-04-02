@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addAppointmentToClient } from "../../actions/addAppointmentToClient";
-import { Form } from "react-bootstrap";
 
 class AppointmentInput extends React.Component {
   state = {
@@ -57,7 +56,7 @@ class AppointmentInput extends React.Component {
             value={this.state.when}
             onChange={this.handleChange}
           />
-          <label> Type of Appointment: </label>
+          <label>Appointment Type: </label>
           <select
             name="kind"
             value={this.state.kind}

@@ -9,8 +9,8 @@ import { removeAppointment } from "../../actions/removeAppointment";
 const Appointments = props => {
   const formatTime = time => moment(time).format("MMMM Do YYYY, h:mm a");
 
-  const removeAppointment = deletedAppointment => {
-    props.removeAppointment(deletedAppointment);
+  const removeAppointment = appointment => {
+    props.removeAppointment(appointment);
   };
 
   return (

@@ -36,10 +36,6 @@ class ProvydersContainer extends React.Component {
         ) : (
           <p>Loading...</p>
         )}
-        {/* <ProvyderInput /> */}
-        {/* <ProvyderInput client={this.props.client}/> */}
-        {/* <Provyders provyders={this.props.client && this.props.client.provyders}/> */}
-        {/* <Provyders provyders={this.props.provyders} /> */}
       </div>
     );
   }

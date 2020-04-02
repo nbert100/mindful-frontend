@@ -8,8 +8,8 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import Client from "./Client";
-import ClientInput from "./ClientInput";
+// import Client from "./Client";
+// import ClientInput from "./ClientInput";
 
 const Clients = props => {
   return (
