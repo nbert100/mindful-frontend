@@ -47,10 +47,10 @@ class ClientsContainer extends React.Component {
 }
 
 //give this component access through props to the clients inside our state
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     clients: state.clients,
-    provyders: state.provyders
+    provyders: state.provyders,
   };
 };
 

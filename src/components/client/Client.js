@@ -1,11 +1,13 @@
 // because we're just displaying information should use functional component
+//changed props to props.provyders instead of client.provyders
+
 import React from "react";
 import { useParams } from "react-router-dom";
 import AppointmentInput from "../../components/appointment/AppointmentInput";
 import Appointments from "../../components/appointment/Appointments";
 
-const Client = props => {
-  const formatPhone = phone => {
+const Client = (props) => {
+  const formatPhone = (phone) => {
     phone = client.phone.replace(/[^\d]/g, "");
     if (phone.length == 10) {
       return phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
@@ -13,7 +15,8 @@ const Client = props => {
     return null;
   };
   let { id } = useParams();
-  let client = props.clients.find(client => client.id == id);
+  // let provyder = props.provyders;
+  let client = props.clients.find((client) => client.id == id);
   return (
     <div>
       <h2>
