@@ -1,4 +1,6 @@
 export default function provyderReducer(state = [], action) {
+  console.log(9);
+
   switch (action.type) {
     case "FETCH_PROVYDERS":
       return action.payload;

@@ -12,8 +12,14 @@ import ProvyderInput from "../components/provyder/ProvyderInput";
 import Provyder from "../components/provyder/Provyder";
 
 class ProvydersContainer extends React.Component {
+  //define single provyder for provyder component props
+
   render() {
-    console.log(this.props);
+    // console.log(this.props);
+    // const provyder = this.props.provyders.find(
+    //   (provyder) => provyder.id === this.props.match.params.id
+    // );
+    console.log(1);
     return (
       <div>
         {this.props.provyders.length > 0 ? (
@@ -21,14 +27,14 @@ class ProvydersContainer extends React.Component {
             <Route path="/provyders/new" component={ProvyderInput} />
             <Route
               path="/provyders/:id"
-              render={routerProps => (
+              render={(routerProps) => (
                 <Provyder {...routerProps} provyders={this.props.provyders} />
               )}
             />
             <Route
               exact
               path="/provyders"
-              render={routerProps => (
+              render={(routerProps) => (
                 <Provyders {...routerProps} provyders={this.props.provyders} />
               )}
             />
@@ -40,10 +46,10 @@ class ProvydersContainer extends React.Component {
     );
   }
 }
-
-const mapStateToProps = state => {
+//what is this doing?
+const mapStateToProps = (state) => {
   return {
-    provyders: state.provyders
+    provyders: state.provyders,
   };
 };
 

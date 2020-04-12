@@ -12,7 +12,7 @@ const Appointments = (props) => {
     if (props.provyders.length > 0) {
       return appProv;
     } else {
-      return "Loading provider..";
+      return "Loading provider...";
     }
   };
 

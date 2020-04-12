@@ -12,18 +12,20 @@ class ProvyderInput extends React.Component {
     phone: "",
     fax: "",
     address: "",
-    zipcode: ""
+    zipcode: "",
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
+    console.log(2);
     this.props.addProvyder(this.state);
+    console.log(3);
     this.setState({
       first_name: "",
       last_name: "",
@@ -32,12 +34,13 @@ class ProvyderInput extends React.Component {
       phone: "",
       fax: "",
       address: "",
-      zipcode: ""
+      zipcode: "",
     });
     this.props.history.push("/provyders");
   };
 
   render() {
+    console.log(4);
     return (
       <div className="provyder-form-container">
         <h4>New Provider:</h4>

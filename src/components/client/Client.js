@@ -15,7 +15,7 @@ const Client = (props) => {
     return null;
   };
   let { id } = useParams();
-  // let provyder = props.provyders;
+
   let client = props.clients.find((client) => client.id == id);
   return (
     <div>
