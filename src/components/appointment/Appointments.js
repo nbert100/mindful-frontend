@@ -11,14 +11,13 @@ const Appointments = (props) => {
     );
     if (props.provyders.length > 0) {
       return appProv;
-    } else {
-      return "Loading provider...";
     }
   };
 
   const removeAppointment = (appointment) => {
     props.removeAppointment(appointment);
   };
+
   return (
     <div className="appointment-container">
       <h5>Appointments:</h5>
@@ -42,4 +41,10 @@ const Appointments = (props) => {
   );
 };
 
-export default connect(null, { removeAppointment })(Appointments);
+const mapStateToProps = (state) => {
+  return {
+    provyders: state.provyders,
+  };
+};
+
+export default connect(mapStateToProps, { removeAppointment })(Appointments);

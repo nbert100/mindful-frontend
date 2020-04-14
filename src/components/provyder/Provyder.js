@@ -1,12 +1,11 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 
 class Provyder extends React.Component {
   state = {
     likes: 0,
   };
 
-  handleClick = (event) => {
+  handleClick = () => {
     this.setState({
       likes: this.state.likes + 1,
     });
@@ -21,8 +20,9 @@ class Provyder extends React.Component {
       phone = provyder.phone.replace(/[^\d]/g, "");
       if (phone.length == 10) {
         return phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+      } else {
+        return <p>No phone number</p>;
       }
-      return <p>No phone number</p>;
     };
 
     return (

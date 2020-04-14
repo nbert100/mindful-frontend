@@ -1,24 +1,13 @@
-//render other components and pass them data if they require data
-//also have other functions inside of them
-//typically are class components because they typically need state
-//class component must have a render
-
 import React from "react";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-// import { fetchProvyders } from "../actions/fetchProvyders";
+
 import Provyders from "../components/provyder/Provyders";
 import ProvyderInput from "../components/provyder/ProvyderInput";
 import Provyder from "../components/provyder/Provyder";
 
 class ProvydersContainer extends React.Component {
-  //define single provyder for provyder component props
-
   render() {
-    // console.log(this.props);
-    // const provyder = this.props.provyders.find(
-    //   (provyder) => provyder.id === this.props.match.params.id
-    // );
     console.log(1);
     return (
       <div>
@@ -46,7 +35,7 @@ class ProvydersContainer extends React.Component {
     );
   }
 }
-//what is this doing?
+
 const mapStateToProps = (state) => {
   return {
     provyders: state.provyders,
